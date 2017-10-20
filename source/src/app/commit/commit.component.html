@@ -1,0 +1,33 @@
+<h2>Commits list</h2>
+<div class="button-area" (click)="getCommitsList()">
+  <div>
+    <div>
+      <button (click)="getCommitsList()">refresh</button>
+    </div>
+  </div>
+</div>
+<ol *ngIf="commitsLength > 0; else noCommits" class="commit-group table-list table-list-bordered">
+  <li *ngFor="let commitItem of commitsArray" class="commit commits-list-item table-list-item">
+    <div class="table-list-cell commit-avatar-cell">
+      <div class="avatar-parent-child">
+          <img src="{{commitItem?.author.avatar_url}}" width="36" height="36" alt="@{{commitItem?.author.login}}" class="avatar">
+      </div>
+    </div>
+    <div class="table-list-cell">
+      <p class="commit-title">
+        <a href="{{ commitItem?.html_url }}" class="message" title="{{ commitItem?.commit.message }}">{{ commitItem?.commit.message }}</a>
+      </p>
+      <div class="commit-meta commit-author-section ">
+        <span>{{commitItem?.author.login}} </span>
+        <span>committed </span>
+        <span>{{commitItem?.commit.committer.date}} </span>
+        <img src="../../assets/img/ok.png" />
+      </div>
+    </div>
+    <div class="commit-links-cell table-list-cell">
+      commit: {{ commitItem?.sha }}
+    </div>
+
+  </li>
+</ol>
+<ng-template #noCommits>No commits</ng-template>

@@ -1,0 +1,130 @@
+* {
+    font-family: Arial;
+}
+ul, ol {
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.commit-group {
+    margin-top: 10px;
+    list-style-type: none;
+}
+.table-list {
+    display: table;
+    width: 100%;
+    color: #6a737d;
+    table-layout: fixed;
+    border-bottom: 1px solid #e1e4e8;
+}
+.table-list-item {
+    position: relative;
+    display: table-row;
+    list-style: none;
+}
+.table-list-bordered .table-list-cell:first-child {
+    border-left: 1px solid #eaecef;
+}
+.commit-avatar-cell.table-list-cell {
+    padding-right: 0;
+}
+.commit-avatar-cell {
+    width: 47px;
+}
+.table-list-cell {
+    position: relative;
+    display: table-cell;
+    padding: 8px 10px;
+    font-size: 12px;
+    vertical-align: top;
+    border-top: 1px solid #eaecef;
+}
+.avatar-parent-child {
+    position: relative;
+}
+.avatar {
+    display: inline-block;
+    overflow: hidden;
+    line-height: 1;
+    vertical-align: middle;
+    border-radius: 3px;
+}
+img {
+    border-style: none;
+}
+.commits-list-item .commit-title {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 600;
+    color: #24292e;
+}
+.commit .commit-title, .commit .commit-title a {
+    color: #444d56;
+    text-decoration: none;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+}
+.table-list-bordered .table-list-cell:last-child {
+    border-right: 1px solid #eaecef;
+    vertical-align: bottom;
+    text-align: left;
+}
+.commit-links-cell {
+    width: 335px;
+    text-align: right;
+}
+.commit-links-group {
+    margin-right: 5px;
+}
+.BtnGroup {
+    display: inline-block;
+    vertical-align: middle;
+}
+.BtnGroup::before {
+    display: table;
+    content: "";
+}
+.button-area {
+    width: 140px;
+    margin: 0 auto;
+    border: 1px solid #666666;
+    border-radius: 8px;
+    height: 40px;
+    cursor: pointer;
+}
+.button-area > div {
+    background: #cbcbcb;
+    height: 36px;
+    margin: 2px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.button-area > div > div {
+    padding: 4px;
+    text-align: center;
+    cursor: pointer;
+}
+.button-area button {
+    width: 127px;
+    height: 28px;
+    border-radius: 4px;
+    border: 1px solid #ababab;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #555555;
+    /*background-image: url(../../assets/img/star.png), url(../../assets/img/star.png);
+    background-position: left center, right center;
+    background-repeat: no-repeat, no-repeat;*/
+    background: rgb(223,223,223); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(223,223,223,1) 0%, rgba(213,213,213,1) 49%, rgba(192,192,192,1) 51%, rgba(175,175,175,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(223,223,223,1) 0%,rgba(213,213,213,1) 49%,rgba(192,192,192,1) 51%,rgba(175,175,175,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: url(../../assets/img/star.png) no-repeat 10% center / 12px, url(../../assets/img/star.png) no-repeat 90% center / 12px, linear-gradient(to bottom, rgba(223,223,223,1) 0%,rgba(213,213,213,1) 49%,rgba(192,192,192,1) 51%,rgba(175,175,175,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dfdfdf', endColorstr='#afafaf',GradientType=0 ); /* IE6-9 */
+    /*background-position: left center, right center;*/
+    background-repeat: no-repeat, no-repeat;
+    -webkit-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+    cursor: pointer;
+}
